@@ -179,6 +179,10 @@ Console.Clear();
 //     Console.WriteLine($"\t{character.Name} - Alias: [{string.Join(", ", character.Alias)}]");
 // }
 
-// Are there any character(s) with no alias (Donkey Kong series)?
-bool dkCharactersWithNoAlias = characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"));
-Console.WriteLine($"Are there characters with no alias (Donkey Kong series): {dkCharactersWithNoAlias}");
+// // Are there any character(s) with no alias (Donkey Kong series)?
+// bool dkCharactersWithNoAlias = characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"));
+// Console.WriteLine($"Are there characters with no alias (Donkey Kong series): {dkCharactersWithNoAlias}");
+
+// How many character(s) with no alias (Donkey Kong series)?
+int dkCharactersWithNoAliasCount = characters.Count(c => c.Alias.Count == 0 && c.Series.Contains("Donkey Kong"));
+Console.WriteLine($"Characters with no alias (Donkey Kong series): {dkCharactersWithNoAliasCount}");
