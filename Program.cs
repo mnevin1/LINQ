@@ -164,6 +164,10 @@ Console.Clear();
 //     Console.WriteLine($"\t{character.Name} - Alias: [{string.Join(", ", character.Alias)}] - Series: {string.Join(", ", character.Series)}");
 // }
 
-// Are there any character(s) with no alias (Mario series)?
-bool marioCharactersWithNoAlias = characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Mario"));
-Console.WriteLine($"Are there characters with no alias (Mario series): {marioCharactersWithNoAlias}");
+// // Are there any character(s) with no alias (Mario series)?
+// bool marioCharactersWithNoAlias = characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Mario"));
+// Console.WriteLine($"Are there characters with no alias (Mario series): {marioCharactersWithNoAlias}");
+
+// How many character(s) with no alias (Mario series)?
+int marioCharactersWithNoAliasCount = characters.Count(c => c.Alias.Count == 0 && c.Series.Contains("Mario"));
+Console.WriteLine($"Characters with no alias (Mario series): {marioCharactersWithNoAliasCount}");
