@@ -138,6 +138,13 @@ Console.Clear();
 //     Console.WriteLine($"\t{name}");
 // }
 
-// How many character(s) made their first appearance in Donkey Kong 64?
-int charactersFromDK64 = characters.Count(c => c.FirstAppearance == "Donkey Kong 64");
-Console.WriteLine($"Characters that first appeared in Donkey Kong 64: {charactersFromDK64}");
+// // How many character(s) made their first appearance in Donkey Kong 64?
+// int charactersFromDK64 = characters.Count(c => c.FirstAppearance == "Donkey Kong 64");
+// Console.WriteLine($"Characters that first appeared in Donkey Kong 64: {charactersFromDK64}");
+
+// List the character(s) that made their first appearance in Donkey Kong 64 - return character name only.
+Console.WriteLine("Characters that first appeared in Donkey Kong 64:");
+foreach (string? name in characters.Where(c => c.FirstAppearance == "Donkey Kong 64").Select(c => c.Name))
+{
+    Console.WriteLine($"\t{name}");
+}
