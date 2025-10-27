@@ -107,4 +107,4 @@ Console.Clear();
 
 // How many character(s) were created in 1981 (all series)?
 int charactersCreatedIn1981 = characters.Count(c => c.YearCreated == 1981);
-Console.WriteLine($"[1.19a] Characters created in 1981 (all series): {charactersCreatedIn1981}");
+Console.WriteLine($"Characters created in 1981 (all series): {charactersCreatedIn1981}");
