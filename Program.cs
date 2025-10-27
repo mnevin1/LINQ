@@ -228,6 +228,13 @@ Console.Clear();
 //     Console.WriteLine($"\t{name}");
 // }
 
-// How many character(s) in the Mario series are Human species?
-int marioHumanCharacters = characters.Count(c => c.Series.Contains("Mario") && c.Species == "Human");
-Console.WriteLine($"Human characters in Mario series: {marioHumanCharacters}");
+// // How many character(s) in the Mario series are Human species?
+// int marioHumanCharacters = characters.Count(c => c.Series.Contains("Mario") && c.Species == "Human");
+// Console.WriteLine($"Human characters in Mario series: {marioHumanCharacters}");
+
+// List the character(s) in the Mario series that are Human species - return character name only.
+Console.WriteLine("Human characters in Mario series:");
+foreach (string? name in characters.Where(c => c.Series.Contains("Mario") && c.Species == "Human").Select(c => c.Name))
+{
+    Console.WriteLine($"\t{name}");
+}
