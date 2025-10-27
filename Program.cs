@@ -160,3 +160,6 @@ Console.Clear();
 // List the character(s) with no alias (all series) - return character name, alias and series only.
 Console.WriteLine("Characters with no alias (all series):");
 foreach (var character in characters.Where(c => c.Alias.Count == 0).Select(c => new { c.Name, c.Alias, c.Series }))
+{
+    Console.WriteLine($"\t{character.Name} - Alias: [{string.Join(", ", character.Alias)}] - Series: {string.Join(", ", character.Series)}");
+}
