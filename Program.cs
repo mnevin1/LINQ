@@ -255,8 +255,15 @@ Console.Clear();
 // Console.WriteLine($"Mario series characters with species other than Human or Koopa: {marioOtherSpeciesCharacters}");
 
 // List the character(s) in the Mario series that are something other than Human or Koopa species - return character name and species only.
-Console.WriteLine("Mario series characters with species other than Human or Koopa:");
-foreach (var character in characters.Where(c => c.Series.Contains("Mario") && c.Species != "Human" && c.Species != "Koopa").Select(c => new { c.Name, c.Species }))
+// Console.WriteLine("Mario series characters with species other than Human or Koopa:");
+// foreach (var character in characters.Where(c => c.Series.Contains("Mario") && c.Species != "Human" && c.Species != "Koopa").Select(c => new { c.Name, c.Species }))
+// {
+//     Console.WriteLine($"\t{character.Name} - Species: {character.Species}");
+// }
+
+// List the character(s) in the Donkey Kong series that are something other than Human or Kong species - return character name and species only?
+Console.WriteLine("Donkey Kong series characters with species other than Human or Kong:");
+foreach (var character in characters.Where(c => c.Series.Contains("Donkey Kong") && c.Species != "Human" && c.Species != "Kong").Select(c => new { c.Name, c.Species }))
 {
     Console.WriteLine($"\t{character.Name} - Species: {character.Species}");
 }
